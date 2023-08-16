@@ -1,0 +1,7 @@
+package com.onlinefood.pojos;
+
+public class Menu extends BaseEntity {
+	
+	
+		
+}
