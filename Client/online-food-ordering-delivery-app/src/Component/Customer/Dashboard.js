@@ -11,6 +11,7 @@ function Dashboard() {
     const toggleMenu = () => {
         setIsVegMenu(!isVegMenu);
     };
+    //
 
     const buttonClasses = isVegMenu ? 'btn veg-menu' : 'btn all-menu';
     const history = useHistory();
