@@ -1,0 +1,8 @@
+package com.onlinefood.service;
+
+import com.onlinefood.dto.AddCustomerDTO;
+import com.onlinefood.dto.CustomerRespDTO;
+
+public interface CustomerService {
+	AddCustomerDTO addNewCustomer(AddCustomerDTO c);
+}

@@ -1,0 +1,37 @@
+package com.onlinefood.service;
+
+import javax.transaction.Transactional;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.onlinefood.dto.AddCustomerDTO;
+import com.onlinefood.dto.CustomerRespDTO;
+
+
+@Service
+@Transactional
+public class CustomerServiceImpl implements CustomerService{
+	
+	@Autowired
+	private ModelMapper mapper;
+	
+	@Override
+	public CustomerRespDTO addNewCustomer(AddCustomerDTO c) {
+		if (dto.getConfirmPassword().equals(dto.getPassword())) {
+			// validate dept --o.w throw the exc
+			Department dept = deptRepo.findById(dto.getDeptId())
+					.orElseThrow(() -> new ResourceNotFoundException("Invalid Dept id !!!"));
+			// dept : PERSISTENT
+			// set up a bi dir relationship
+			Employee employee = mapper.map(dto, Employee.class);
+			dept.addEmployee(employee);//cascade on save
+			//IMPORTANT : since you have not explicitly called save : hib has NOT YET assigned the id
+			//only for sending correct id to the REST clnt --> call save
+			// map entity --> dto n return
+			return mapper.map(empRepo.save(employee), EmployeeRespDTO.class);
+		} else
+			throw new ApiException("Passwords don't match!!!!!");
+	}
+}

@@ -1,0 +1,14 @@
+package com.onlinefood.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class CartMenuItemId implements Serializable{
+	@Column(name = "cart_id")
+	private Long cartId;
+
+	@Column(name = "menu_item_id")
+	private Long menuItemId;
+
+}

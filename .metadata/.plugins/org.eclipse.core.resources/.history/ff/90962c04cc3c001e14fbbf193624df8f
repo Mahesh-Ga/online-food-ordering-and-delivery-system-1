@@ -1,0 +1,9 @@
+package com.onlinefood.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.onlinefood.entities.CustomerAddress;
+
+public interface AddressDao extends JpaRepository<CustomerAddress, Long> {
+
+}

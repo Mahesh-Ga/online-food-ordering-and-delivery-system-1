@@ -1,0 +1,9 @@
+package com.onlinefood.entities;
+
+import java.io.Serializable;
+
+@SuppressWarnings
+public class CartItemId implements Serializable{
+	private Long menuItemId;
+	private Long cartId;
+}

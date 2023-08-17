@@ -1,0 +1,5 @@
+package com.onlinefood.exception_handler;
+
+public class GlobalExceptionHandler {
+
+}

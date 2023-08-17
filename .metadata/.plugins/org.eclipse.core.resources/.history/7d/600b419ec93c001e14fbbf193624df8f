@@ -1,0 +1,5 @@
+package com.onlinefood.entities;
+
+public class Payment extends BaseEntity {
+
+}

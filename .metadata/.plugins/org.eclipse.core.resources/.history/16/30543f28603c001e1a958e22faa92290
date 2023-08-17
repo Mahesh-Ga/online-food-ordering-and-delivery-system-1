@@ -1,0 +1,11 @@
+package com.onlinefood.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.onlinefood.dao.AddressDao;
+
+public interface AddressService {
+
+
+	
+}

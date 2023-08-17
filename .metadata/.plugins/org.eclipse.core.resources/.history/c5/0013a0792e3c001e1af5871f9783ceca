@@ -1,0 +1,9 @@
+package com.onlinefood.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.onlinefood.pojos.Restaurant;
+
+public interface RestaurantDao extends JpaRepository<Restaurant, Long>{
+
+}

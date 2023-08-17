@@ -1,0 +1,9 @@
+package com.onlinefood.dto;
+
+
+@NoArgsConstructor
+@Getter
+@Setter
+public class ApiResponse {
+
+}

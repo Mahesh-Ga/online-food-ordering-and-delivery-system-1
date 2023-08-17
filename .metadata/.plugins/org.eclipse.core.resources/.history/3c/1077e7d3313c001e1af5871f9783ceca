@@ -1,0 +1,19 @@
+package com.onlinefood.service;
+
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Service;
+
+import com.onlinefood.dto.CustomerRespDTO;
+import com.onlinefood.entities.Customer;
+
+@Service
+@Transactional
+public class CustomerServiceImpl implements CustomerService{
+	
+	@Override
+	public CustomerRespDTO addNewCustomer(Customer c) {
+		
+		return null;
+	}
+}

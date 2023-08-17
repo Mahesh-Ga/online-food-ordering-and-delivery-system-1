@@ -1,0 +1,6 @@
+package com.onlinefood.entities;
+
+
+public class Address {
+
+}

@@ -1,0 +1,12 @@
+package com.onlinefood.service;
+
+import com.onlinefood.dto.AddCustomerAddressDTO;
+import com.onlinefood.dto.AddCustomerDTO;
+import com.onlinefood.entities.Address;
+//import com.onlinefood.dto.CustomerRespDTO;
+
+public interface CustomerService {
+	AddCustomerDTO addNewCustomer(AddCustomerDTO c);
+	void addAddressToCustomer(Long customerId, AddCustomerAddressDTO address);
+	
+}

@@ -1,0 +1,5 @@
+package com.onlinefood.dao;
+
+public class AddressDao {
+
+}

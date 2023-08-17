@@ -1,0 +1,34 @@
+package com.onlinefood.service;
+
+import javax.transaction.Transactional;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.onlinefood.dto.AddCustomerDTO;
+import com.onlinefood.dto.CustomerRespDTO;
+import com.onlinefood.entities.Customer;
+
+
+@Service
+@Transactional
+public class CustomerServiceImpl implements CustomerService{
+	
+	@Autowired
+	private ModelMapper mapper;
+	
+	@Override
+	public CustomerRespDTO addNewCustomer(AddCustomerDTO cDto) {
+		if (cDto.getConfirmPassword().equals(cDto.getPassword())) {
+			Department dept = deptRepo.findById(cDto.getDeptId())
+					.orElseThrow(() -> new ResourceNotFoundException("Invalid Dept id !!!"));
+			// dept : PERSISTENT
+			// set up a bi dir relationship
+			Customer customer = mapper.map(cDto, Customer.class);
+			dept.addEmployee(employee);
+			return mapper.map(empRepo.save(employee), EmployeeRespDTO.class);
+		} else
+			throw new ApiException("Passwords don't match!!!!!");
+	}
+}

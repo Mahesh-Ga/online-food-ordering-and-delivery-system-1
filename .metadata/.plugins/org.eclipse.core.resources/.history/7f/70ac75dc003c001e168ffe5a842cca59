@@ -1,0 +1,6 @@
+package com.onlinefood.dao;
+
+public class CustomerDaoImpl implements CustomerDao{
+
+	
+}

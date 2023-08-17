@@ -1,0 +1,10 @@
+package com.onlinefood.entities;
+
+public class CartMenuItemId {
+	@Column(name = "cart_id")
+	private Long cartId;
+
+	@Column(name = "menu_item_id")
+	private Long menuItemId;
+
+}
