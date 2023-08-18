@@ -30,14 +30,19 @@ public class Menu extends BaseEntity {
 	
 	@Enumerated(EnumType.STRING)
 	@Column(length = 100)
-	private MenuType category ;
+	private MenuType menuType ;
+	
+	
+	@Enumerated(EnumType.STRING)
+	@Column(length = 10)
+	private Category category;
 	
 	@Column
 	private double price;
 	
 	@Column
-    @Min(1)
-	@Max(5)
+//    @Min(1)
+//	@Max(5)
 	private int rating;
 
 	@ManyToOne
