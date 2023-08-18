@@ -1,5 +1,0 @@
-package com.onlinefood.entities;
-
-public class DeliveryPartner extends BaseEntity{
-		
-}

@@ -1,6 +1,0 @@
-package com.onlinefood.entities;
-
-public class CartItemId {
-	private Long menuItemId;
-	private Long cartId;
-}

@@ -1,5 +1,0 @@
-package com.onlinefood.pojos;
-
-public enum CuisineType {
-
-}

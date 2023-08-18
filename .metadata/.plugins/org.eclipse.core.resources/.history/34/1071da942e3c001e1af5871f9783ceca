@@ -1,7 +1,0 @@
-package com.onlinefood.service;
-
-import com.onlinefood.entities.Customer;
-
-public interface CustomerService {
-	Customer addCustomerDetails(Customer c);
-}
